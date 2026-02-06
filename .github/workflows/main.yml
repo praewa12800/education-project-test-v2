@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Test 
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Run basic check
-      run: echo "CI is working!"
+      - name: Run test
+        run: echo "Running login test"
